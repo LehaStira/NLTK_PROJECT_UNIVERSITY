@@ -27,8 +27,12 @@ def main():
     print(f'English = {lexical_diversity_eng}')
     print(f'Russian = {lexical_diversity_ru}')
     english_again = get_english(russian_text)
-    lexical_diversity_eng_again = get_lexical_diversity(english_again)
-    print(f'English again = {lexical_diversity_eng_again}')
+    second_english_lexical = get_lexical_diversity(english_again)
+    second_russian = get_russian(english_again)
+    second_russian_lexical = get_lexical_diversity(second_russian)
+    print(f'Lexical diversity of second russian translate = {second_russian_lexical}')
+    print(f'Lexical diversity of second english translate = {second_english_lexical}')
+    third_english = get_english(second_russian)
 
 
 if __name__ == '__main__':
